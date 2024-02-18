@@ -5,10 +5,10 @@ class KaicongAudio(KaicongInput):
     HEADER_SZ = 32 # Bytes
     PACKET_SZ = 544 # Bytes
     SAMPLE_SZ = 2 # Bytes
-    
+
     RATE_HZ = 8000
-    NCHANNELS = 1 
-    
+    NCHANNELS = 1
+
     URI = "http://%s:81/audiostream.cgi?user=%s&pwd=%s&streamid=2&filename="
     
     def __init__(self, domain, callback=None, user="admin", pwd="123456"):
@@ -37,7 +37,7 @@ class KaicongAudio(KaicongInput):
                                 state)
             result += sample
     
-        print len(result)
+        print(len(result))
         return result
         
         
@@ -49,7 +49,7 @@ if __name__ == "__main__":
     import wave 
 
     if len(sys.argv) != 2:
-        print "Usage: %s <ip_address>" % sys.argv[0]
+        print("Usage: %s <ip_address>" % sys.argv[0])
         sys.exit(-1)
     
     class Speaker:
