@@ -15,7 +15,7 @@ class KaicongInput():
         self.stream = None
     
     def connect(self):
-        print "Opening url: %s" % self.uri
+        print("Opening url: %s" % self.uri)
         self.stream = urllib2.urlopen(self.uri)
         
         if not self.stream:
